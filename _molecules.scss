@@ -1,0 +1,65 @@
+@use "variables" as *;
+@use "atoms";
+
+// use the mixins from the atoms module to compose our molecules. If you prefer the terminology 'blocks' and 'elements' feel free to use it instead!
+//The base styling we made on our atoms (elements) does most of the work...here we would make any modifications on the elements if they need to appear differently in a certain molecule (block)
+[role="banner"] {
+  > h1 {
+    // notice we have to reference the 'atoms' namespace to find our mixins.
+    @include atoms.uppercase($text-light);
+  }
+}
+.summary {
+  @include atoms.uppercase($text-dark);
+  letter-spacing: 1px;
+  padding: 5% 5%;
+  width: clamp(210px, 50%, 75%);
+  margin-bottom: 25px; 
+  background: #fff;
+  color: #1a181e;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  p:last-child {
+    @include atoms.divider;
+  }
+  a {
+    color: $text-dark; //in this case the link wants to be light instead of the default dark
+  }
+}
+.preamble {
+  padding: 30px;
+  background-color: $accent3;
+  color: $text-light;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 5px 9px 10px #161c1c;
+}
+
+// Supporting
+.explanation {
+  // sizing and spacing
+  padding: 0px 30px 30px 30px;
+  margin-left: 7%;
+  margin-right: 7%;
+
+  // styles
+  background-color: $accent3;
+  color: $text-light;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 5px 5px 10px #161c1c;
+
+  h3 {
+    font-size: larger;
+    text-transform: uppercase;
+  }
+}
+
+.participation,
+.benefits {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #1a181e;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 0 7% 0 7%;
+}

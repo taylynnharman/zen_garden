@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Oswald&display=swap");
+
+// Colors
+$background-color: #508991;
+$primary: #d4af37;
+$accent1: #1a181e;
+$accent2: #f7f7f7;
+$accent3: #25232b;
+$accent4: #fff;
+$box-shadow: #161c1c;
+
+// Text
+$fonts-body: "Montserrat", sans-serif;
+$fonts-headline: "Oswald", serif;
+$text-dark: #1a181e;
+$text-light: #f7f7f7;
+
+//shadows
+$shadow-elevation-high: -7px 7px 10px 2px hsl(0deg 0% 20% / 1);
+$shadow-elevation-left: 7px 7px 10px 3px hsl(0deg 0% 20% / 1);
+$shadow-elevation-main: 0px 15px 10px 2px hsl(0, 0%, 20%);
