@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Oswald&display=swap");
-
 body {
   background-image: linear-gradient(rgba(240, 248, 255, 0.9), rgba(240, 248, 255, 0.9)), url(bgtesselation.png);
 }
@@ -23,8 +22,7 @@ h1 {
 
 h2 {
   color: #1a181e;
-  font-weight: 900;
-  /* Heavy */
+  font-weight: 900; /* Heavy */
   font-size: 6em;
   letter-spacing: 1px;
   line-height: 1em;
@@ -32,18 +30,14 @@ h2 {
 }
 
 h3 {
-  font-size: 2.25em;
-  font-weight: 200;
-  /* Thin */
-  letter-spacing: 1px;
-  line-height: 1em;
-  padding: 0.5em 0 0.25em 0;
+  font-size: larger;
+  font-family: "Oswald", serif;
+  text-transform: uppercase;
 }
 
 h4 {
   font-size: 1.5em;
-  font-weight: 200;
-  /* Thin */
+  font-weight: 200; /* Thin */
   letter-spacing: 1px;
   line-height: 1em;
   margin: 0.5em 0;
@@ -68,7 +62,7 @@ a:hover {
   border-color: #1a181e;
 }
 
-[role=banner]>h1 {
+[role=banner] > h1 {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -80,21 +74,21 @@ a:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #1a181e;
+  letter-spacing: 1px;
   padding: 5% 5%;
   width: clamp(210px, 50%, 75%);
-  font-weight: bold;
-  line-height: 10px;
-  margin-left: 5px;
   margin-bottom: 25px;
-  box-shadow: 7px 7px 10px 3px hsl(0, 0%, 20%);
+  background: #fff;
+  color: #1a181e;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  border-radius: 8px;
 }
-
 .summary p:last-child {
   border-top: 1px solid #1a181e;
   margin-top: 1em;
   padding-top: 1.5em;
 }
-
 .summary a {
   color: #1a181e;
 }
@@ -116,7 +110,6 @@ a:hover {
   border-radius: 0 0 20px 20px;
   box-shadow: 5px 5px 10px #161c1c;
 }
-
 .explanation h3 {
   font-size: larger;
   text-transform: uppercase;
@@ -137,29 +130,17 @@ a:hover {
 }
 
 .summary {
-  background-color: #d4af37;
+  background-color: #1a181e;
 }
 
-[role=banner]>h1 {
+[role=banner] > h1 {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   transition: all 1s;
 }
 
-/*
-[role=banner] > h1:after{
-  content:"";
-  height:100%;
-  left:0;
-  top:0;
-  width: 0px;  
-  position: absolute; 
-  transition: all 0.3s ease 0s; 
-  -webkit-transition: all 0.3s ease 0s; 
-  z-index: 1;
-}*/
-[role=banner]>h1:hover {
-  background-color: #508991;
+[role=banner] > h1:hover {
+  background-color: #d4af37;
 }
 
 html,
@@ -169,21 +150,11 @@ body,
   box-sizing: border-box;
   background-color: #f7f7f7;
 }
-
 html p,
 body p,
 .main-supporting p {
   font-family: "Montserrat", sans-serif;
 }
-
-html h3,
-body h3,
-.main-supporting h3 {
-  font-size: larger;
-  font-family: "Oswald", serif;
-  text-transform: uppercase;
-}
-
 html a,
 body a,
 .main-supporting a {
@@ -210,7 +181,6 @@ footer,
   color: #f7f7f7;
   padding: 20px;
 }
-
 footer a,
 .sidebar a {
   color: #d4af37;
@@ -253,27 +223,17 @@ footer {
     display: grid;
     grid-template-columns: 100%;
   }
-
   .design-selection {
     width: auto;
   }
-
   .zen-resources,
   .design-archives {
     grid-column: 1/2;
   }
-
-  .container {
-    display: flex;
-    gap: 2rem;
-    margin-block: 2rem;
-  }
-
   .benefits:hover,
   .participation:hover {
     transform: scale(1.03);
   }
-
   .benefits,
   .participation {
     flex: 1;
@@ -284,34 +244,28 @@ footer {
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
   }
-
   .benefits h3,
   .participation h3 {
     font-size: larger;
     font-family: "Oswald";
     text-transform: uppercase;
   }
-
   .benefits a,
   .participation a {
     color: #d4af37;
   }
-
   .participation {
     margin: 0 0 0 7%;
   }
-
   .benefits {
     margin: 0 7% 0 0;
   }
-
   #design-selection {
     width: 100%;
     position: relative;
     overflow: hidden;
     white-space: nowrap;
   }
-
   #design-selection ul {
     display: flex;
     align-items: center;
@@ -320,11 +274,9 @@ footer {
     white-space: nowrap;
     animation: loop 30s linear infinite;
   }
-
   #design-selection ul:hover {
     animation-play-state: paused;
   }
-
   .design-selection li {
     display: flex;
     align-items: center;
@@ -335,12 +287,10 @@ footer {
     margin: 0rem 1rem;
     white-space: nowrap;
   }
-
   @keyframes loop {
     0% {
       transform: translateX(0%);
     }
-
     100% {
       transform: translateX(-50%);
     }

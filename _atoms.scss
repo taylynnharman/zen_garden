@@ -24,8 +24,12 @@
   padding-top: 1.5em;
 }
 // these styles here should describe how the atoms (elements) should appear most of the time.  They can be overridden at the molecule (block) as necessary
-body{
-  background-image: linear-gradient(rgba(240, 248, 255, .90), rgba(240, 248, 255, .90)), url(bgtesselation.png);
+body {
+  background-image: linear-gradient(
+      rgba(240, 248, 255, 0.9),
+      rgba(240, 248, 255, 0.9)
+    ),
+    url(bgtesselation.png);
 }
 
 h2,
@@ -51,13 +55,13 @@ h2 {
   line-height: 1em;
   text-shadow: 6px 6px 5px rgba(80, 137, 145, 0.5);
 }
+
 h3 {
-  font-size: 2.25em;
-  font-weight: 200; /* Thin */
-  letter-spacing: 1px;
-  line-height: 1em;
-  padding: 0.5em 0 0.25em 0;
+  font-size: larger;
+  font-family: $fonts-headline;
+  text-transform: uppercase;
 }
+
 h4 {
   font-size: 1.5em;
   font-weight: 200; /* Thin */
