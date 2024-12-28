@@ -1,20 +1,22 @@
 @use "variables" as *;
 
-.intro {
-  padding: 5% 7% 0 7%;
-}
-.summary {
-  background-color: $accent1;
-}
-
-[role="banner"] > h1 {
+header {
+  display: flex;
+  flex-direction: column;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   transition: all 1s;
+  font-family: "Oswald", serif;
+  color: #f7f7f7;
+  width: fit-content;
+  text-transform: uppercase;
+  background-color: #a67e2d;
+  position: relative;
+  padding: 1% 5% 1% 5%;
 }
 
-[role="banner"] > h1:hover {
-  background-color: $primary;
+[role="banner"] > header:hover {
+  background-color: $accent3;
 }
 
 html,
@@ -22,15 +24,19 @@ body,
 .main-supporting {
   margin: 0px;
   box-sizing: border-box;
-  background-color: $accent2;
-  p {
-    font-family: $fonts-body;
-  }
+  background-color: $background;
   a {
     color: $primary;
+
+    &:hover {
+      color: $background;
+    }
   }
 }
-
+.intro,
+.supporting {
+  padding: 0% 5%;
+}
 .supporting {
   display: flex;
   flex-wrap: wrap;
@@ -39,7 +45,6 @@ body,
 
 .requirements {
   padding: 30px;
-  margin: 0 7% 0 7%;
   background-color: $accent3;
   border-radius: 20px;
   color: $text-light;
@@ -49,16 +54,12 @@ footer,
 .sidebar {
   color: $text-light;
   padding: 20px;
-  a {
-    color: $primary;
-  }
 }
 
 footer {
-  background-color: $accent1;
+  font-family: "Oswald", serif;
   width: 100vw;
-  font-family: $fonts-headline;
-  position: relative;
+  margin: 0 -5%;
 }
 
 .sidebar {
@@ -79,11 +80,16 @@ footer {
   font-size: smaller;
   list-style: none;
 }
-
+.intro {
+  padding-top: 20px;
+}
 .design-selection .designer-name,
 .zen-resources .designer-name,
 .design-archives .designer-name {
   color: #f7f7f7;
+}
+body {
+  background-color: #f8f9fa;
 }
 //!!START LARGER CSS!!//
 @media (min-width: 768px) {
@@ -91,6 +97,21 @@ footer {
   .wrapper {
     display: grid;
     grid-template-columns: 100%;
+  }
+
+  header {
+    /* padding-inline: 1.5em; */
+    position: relative;
+    z-index: 1;
+    transform: translate(10%, 0%);
+  }
+  .summary {
+    width: clamp(210px, 50%, 75%);
+    margin-bottom: -20px;
+    border-radius: 8px;
+    position: relative;
+    transform: translate(0%, -20%);
+    padding-bottom: 20px;
   }
   .design-selection {
     width: auto;
@@ -122,12 +143,7 @@ footer {
       color: $primary;
     }
   }
-  .participation {
-    margin: 0 0 0 7%;
-  }
-  .benefits {
-    margin: 0 7% 0 0;
-  }
+
   #design-selection {
     width: 100%;
     position: relative;

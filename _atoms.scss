@@ -24,36 +24,18 @@
   padding-top: 1.5em;
 }
 // these styles here should describe how the atoms (elements) should appear most of the time.  They can be overridden at the molecule (block) as necessary
-body {
-  background-image: linear-gradient(
-      rgba(240, 248, 255, 0.9),
-      rgba(240, 248, 255, 0.9)
-    ),
-    url(bgtesselation.png);
-}
-
+h1,
 h2,
 h3,
 h4 {
   font-family: $fonts-headline;
   margin: 0;
 }
-h1 {
-  font-family: $fonts-headline;
-  background: $accent1;
-  color: $text-light;
-  display: inline-block;
-  font-weight: normal;
-  margin-bottom: 1em;
-  padding: 0.5em 1em;
-}
+
 h2 {
-  color: $text-dark;
-  font-weight: 900; /* Heavy */
-  font-size: 6em;
-  letter-spacing: 1px;
-  line-height: 1em;
-  text-shadow: 6px 6px 5px rgba(80, 137, 145, 0.5);
+  font-size: smaller;
+  text-transform: none;
+  text-align: center;
 }
 
 h3 {
@@ -68,6 +50,11 @@ h4 {
   letter-spacing: 1px;
   line-height: 1em;
   margin: 0.5em 0;
+}
+
+/* Override rule */
+abbr[title] {
+  text-decoration: none; /* Removes the text-decoration */
 }
 
 p {
